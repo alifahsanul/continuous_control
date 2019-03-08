@@ -1,24 +1,70 @@
 # Report of Assignment
 This report explains the method used to solve the Continuous Control Project and the result.
 
-## Learning Algorithm
-* To solve this reinforcement learning problem, [Deep Q-Learning](https://towardsdatascience.com/self-learning-ai-agents-part-ii-deep-q-learning-b5ac60c3f47) is used with the architectures depicted in the following images. All hidden layers use relu activation function.
-<img src="https://raw.githubusercontent.com/alifahsanul/banana_navigation/master/image/nn.jpg" alt="drawing" width="500"/>
+<img src = "media/trained_agent1.gif" width="700">
 
-* For tutorial on how to use PyTorch to build Deep Q Network, visit this [page](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html).
-* Hyperparameters used:
+## Learning Algorithm
+* This project solved the second version, which is 20 identical agents.
+* To solve this reinforcement learning problem, [Deep Deterministic Policy Gradient](https://arxiv.org/pdf/1509.02971.pdf) is used.
+* The architectures of _Actor_ is shown in the following figure.
+<img src="https://raw.githubusercontent.com/alifahsanul/banana_navigation/master/image/nn.jpg" alt="drawing" width="500"/>
+<img src="media/actor.png" width="600"/>
+* The architectures of _Critic_ is shown in the following figure.
+<img src="https://raw.githubusercontent.com/alifahsanul/banana_navigation/master/image/nn.jpg" alt="drawing" width="500"/>
+<img src="media/critic.png" width="500"/>
+
+* Hyperparameters:
+  * Batch size: 128
+  * Target update rate &tau; = 1 &times; 10<sup>-3</sup>
   * Discount factor &gamma; = 0.99
   * Learning Rate &alpha; = 5 &times; 10<sup>-4</sup>
+  * Replay Buffer
+  * Ornstein-Uhlenbeck noise parameter
 
 ## Plof of Rewards
 The agent was trained for 704 episodes before reaching 13 average score for 100 consecutive episodes.
-![alt text](https://raw.githubusercontent.com/alifahsanul/banana_navigation/master/image/Score.jpg)
 
-Trained agent at play:
-![alt text](https://github.com/alifahsanul/banana_navigation/blob/master/image/agent_simulate.gif?raw=true)
+<img src="media/Scores.png" alt="drawing" width="500"/>
 
 ## Ideas for future work
-  * Double Deep Q-Learning
-  * Different activation function (leaky relu, sigmoid, etc.)
-  * Learning from pixels instead of direct information from environment
-  * Various number of hidden layers and its nodes
+  * Applying [D4PG](https://ieeexplore.ieee.org/document/8122622) to further improve the efficiency of the experience replay mechanism in DDPG and thus speeding up the training process. D4PG modify DDPG by introducing prioritize experience replay method. Prioritized sampling is adopted instead of uniform sampling. The experimental results show that DDPG with prioritized experience replay can reduce the training time and improve the stability of the training process, and is less sensitive to the changes of some hyperparameters such as the size of replay buffer, minibatch and the updating rate of the target network.
+  
+## Credits
+  * https://github.com/udacity/deep-reinforcement-learning/tree/master/ddpg-pendulum
+  * Distributed Distributional Deterministic Policy Gradients https://ieeexplore.ieee.org/document/8122622
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

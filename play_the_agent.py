@@ -2,7 +2,7 @@ from unityagents import UnityEnvironment
 import numpy as np
 from agent import Agent
 
-env = UnityEnvironment(file_name='/home/alifahsanul/Documents/RLnanodegree/deep-reinforcement-learning/p2_continuous-control/Reacher_Linux/Reacher.x86_64')
+env = UnityEnvironment(file_name='/home/alif/Documents/deeprl-udacity/deep-reinforcement-learning/p2_continuous-control/Reacher_Linux/Reacher.x86_64')
 brain_name = env.brain_names[0]
 brain = env.brains[brain_name]
 env_info = env.reset(train_mode=True)[brain_name]
@@ -11,9 +11,9 @@ action_size = brain.vector_action_space_size
 states = env_info.vector_observations
 state_size = states.shape[1]
 
-agent = Agent(device = 'cpu', 
-                        state_size = state_size, 
-                        n_agents = num_agents, 
+agent = Agent(device = 'cpu',
+                        state_size = state_size,
+                        n_agents = num_agents,
                         action_size = action_size
                         )
 

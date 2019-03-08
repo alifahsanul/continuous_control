@@ -9,9 +9,7 @@ def episode_reach_req(scores_np, requirement):
     index = index[0][0]
     return index
 
-
-
-scores_df = pd.read_csv('scores.csv')
+scores_df = pd.read_csv('./checkpoint1/scores.csv')
 scores = scores_df.values
 
 window_score_df = pd.DataFrame(np.vstack((np.zeros((100,1)), scores))).rolling(100).mean()

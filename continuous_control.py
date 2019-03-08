@@ -12,7 +12,7 @@ import pandas as pd
 # env = UnityEnvironment(file_name='/data/Reacher_One_Linux_NoVis/Reacher_One_Linux_NoVis.x86_64')
 
 # select this option to load version 2 (with 20 agents) of the environment
-env = UnityEnvironment(file_name='/home/alifahsanul/Documents/RLnanodegree/deep-reinforcement-learning/p2_continuous-control/Reacher_Linux/Reacher.x86_64')
+env = UnityEnvironment(file_name='/home/alif/Documents/deeprl-udacity/deep-reinforcement-learning/p2_continuous-control/Reacher_Linux/Reacher.x86_64')
 
 # get the default brain
 brain_name = env.brain_names[0]
