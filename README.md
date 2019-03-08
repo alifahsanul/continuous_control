@@ -1,7 +1,7 @@
 # Deep Reinforcement Learning Project 2
 ## Continuous Control
 Second Udacity Deep Reinforcement Learning Nanodegree Assignment
-
+<img src="https://raw.githubusercontent.com/alifahsanul/continuous_control/master/media/tennis_env.png" width=500>
 ## Project details
 * This project is the second mandatory project in Udacity Deep Reinforcement Learning Nanodegree.
 * The goal of this project is to train a robot arm to reach target as long as possible. There are two versions of Unity environment provided.
