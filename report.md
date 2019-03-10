@@ -19,8 +19,11 @@ This report explains the method used to solve the Continuous Control Project and
   * Target update rate &tau; = 1 &times; 10<sup>-3</sup>
   * Discount factor &gamma; = 0.99
   * Learning Rate &alpha; = 5 &times; 10<sup>-4</sup>
-  * Replay Buffer
+  * Replay Buffer 1 &times; 10<sup>5</sup>
+  * Batch size 128
   * Ornstein-Uhlenbeck noise parameter
+    * &theta; = 0.15
+    * &sigma; = 0.2
 
 ## Plof of Rewards
 The agent was trained for 704 episodes before reaching 13 average score for 100 consecutive episodes.
